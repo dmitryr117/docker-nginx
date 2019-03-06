@@ -1,12 +1,14 @@
-FROM madharjan/docker-base:14.04
-MAINTAINER Madhav Raj Maharjan <madhav.maharjan@gmail.com>
+# This is updated version based of of madharjan/docker-nginx
+
+FROM dmitryr117/docker-base:ubuntu18.04
+MAINTAINER Dmitry Rodetsky <colirs.developer@gmail.com>
 
 ARG VCS_REF
 ARG NGINX_VERSION
 ARG DEBUG=false
 
 LABEL description="Docker container for Nginx" os_version="Ubuntu ${UBUNTU_VERSION}" \
-      org.label-schema.vcs-ref=${VCS_REF} org.label-schema.vcs-url="https://github.com/madharjan/docker-nginx"
+      org.label-schema.vcs-ref=${VCS_REF} org.label-schema.vcs-url="https://github.com/dmitryr117/docker-nginx"
 
 ENV NGINX_VERSION ${NGINX_VERSION}
 
